@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html  >
+   <head>
+   
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+         <link href="jk-carousel.min.css" rel="stylesheet" type="text/css" >
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   </head>
+
+   
+  <body  ng-app="BlankApp" ng-cloak>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    
+   
+   <script src="jk-carousel.min.js"></script>
+   <script type="text/javascript">    
+    /**
+     * You must include the dependency on 'ngMaterial' 
+     */
+   var myApp= angular.module('BlankApp', ['ngMaterial' ,'jkAngularCarousel']);
+
+    myApp.controller('MyCtrl', function($scope) {
+    $scope.dataArray = [
+      {
+        src: 'http://www.parasholidays.in/blog/wp-content/uploads/2014/05/holiday-tour-packages-for-usa.jpg'
+      },
+      {
+        src: 'http://clickker.in/wp-content/uploads/2016/03/new-zealand-fy-8-1-Copy.jpg'
+      },
+      {
+        src: 'http://images.kuoni.co.uk/73/indonesia-34834203-1451484722-ImageGalleryLightbox.jpg'
+      },
+      {
+        src: 'http://images.kuoni.co.uk/73/malaysia-21747826-1446726337-ImageGalleryLightbox.jpg'
+      },
+      {
+        src: 'http://www.kimcambodiadriver.com/uploads/images/tours/kim-cambodia-driver-angkor-wat.jpg'
+      },
+      {
+        src: 'https://www.travcoa.com/sites/default/files/styles/flexslider_full/public/tours/images/imperialvietnam-halong-bay-14214576.jpg?itok=O-q1yr5_'
+      }
+    ];
+});
+
+  </script>
+
+  <!--  <md-toolbar>
+      <div class="md-toolbar-tools" >
+       <div>
+        <h2>
+          <span>Toolbar with Standard Buttons</span>
+        </h2>
+        </div>
+        <span flex></span>
+        <div hide show-gt-sm flex>
+        <md-button class="md-raised" aria-label="Learn More">
+          Learn more
+        </md-button>
+        </div>  
+        
+    </md-toolbar>  -->
+  <div hide show-gt-xs  layout="row" layout-align="end start">
+    <md-content class="md-padding" >
+          <md-nav-bar  md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
+            <md-nav-item md-nav-click="goto('page1')" name="page1">Home</md-nav-item>
+            <md-nav-item md-nav-click="goto('page2')" name="page2">Profile</md-nav-item>
+            <md-nav-item md-nav-click="goto('page3')" name="page3">Products</md-nav-item>
+            <md-nav-item md-nav-click="goto('page4')" name="page4">Industries</md-nav-item>
+            <md-nav-item md-nav-click="goto('page5')" name="page5">Contact Us</md-nav-item>
+          </md-nav-bar>
+      </md-content> 
+  </div>
+
+  <div hide-gt-xs layout="column">
+    <md-button class="md-raised" aria-label="Learn More">Home</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Profile</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Products</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Industries</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Contact Us</md-button>
+      
+
+  </div>
+  <div ng-controller="MyCtrl">
+  <md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
+         <jk-carousel
+          data="dataArray"
+          item-template-url="'item-template.html'"
+          max-width="800" 
+          max-height="500"
+          auto-slide="true"
+          auto-slide-time="2000" 
+         >
+         </jk-carousel>
+         </md-card>
+      </div>   
+ <div layout="column" layout-gt-xs="row">
+     <md-card>
+        
+        <img ng-src="logo.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+        <md-card>
+        
+        <img ng-src="logo.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+     <md-card>
+        
+        <img ng-src="logo.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+</div>
+
+
+<!-- </div>
+ <!-- <div layout="row" layout-xs="column">
+   <div  flex>
+   kjcsbdhc
+   </div>
+   <div flex>
+    Only show on gt-sm devices.
+  </div>
+  </div> -->
+<!-- <div>
+ <div layout="row" layout-xs="column">
+  <div flex>
+    I'm above on mobile, and to the left on larger devices.
+  </div>
+  <div flex>
+    I'm below on mobile, and to the right on larger devices.
+  </div>
+</div>
+</div> -->
+  <!-- <div  ng-cloak   layout="row" layout-sm="column" layout-align="start start"> -->
+    <!-- <div flex="20">  <img ng-src="logo.png"></div>  --> 
+     <!-- <div  layout="column" layout-sm="column" layout-align="end start">
+       <md-content class="md-padding" >
+          <md-nav-bar  md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
+            <md-nav-item md-nav-click="goto('page1')" name="page1">Home</md-nav-item>
+            <md-nav-item md-nav-click="goto('page2')" name="page2">Profile</md-nav-item>
+            <md-nav-item md-nav-click="goto('page3')" name="page3">Products</md-nav-item>
+            <md-nav-item md-nav-click="goto('page4')" name="page4">Industries</md-nav-item>
+            <md-nav-item md-nav-click="goto('page5')" name="page5">Contact Us</md-nav-item>
+          </md-nav-bar>
+      </md-content> -->
+    <!-- </div> -->
+  <!-- </div><!
+        <md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
+         <jk-carousel
+          data="dataArray"
+          item-template-url="'item-template.html'"
+          max-width="800" 
+          max-height="500"
+          auto-slide="true"
+          auto-slide-time="2000" 
+         >
+         </jk-carousel>
+         </md-card>
+    
+        <md-content flex layout-padding>
+    <h2>
+Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare 
+    </h2>
+
+  </md-content>
+  <div layout="row">
+     <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img src="logo.png"/>
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">Angular</span>
+            <span class="md-subhead">Material</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+        <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img src="logo.png"/>
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">Angular</span>
+            <span class="md-subhead">Material</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+     <md-card>
+        <md-card-header>
+          <md-card-avatar>
+            <img src="logo.png"/>
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-title">Angular</span>
+            <span class="md-subhead">Material</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card header</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+      </md-card>
+
+   </div> -->
+</body>
+</html>
