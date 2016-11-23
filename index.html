@@ -9,12 +9,12 @@
    </head>
 
    
-  <body  ng-app="BlankApp" ng-cloak>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <body  ng-app="BlankApp" ng-cloak >
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     
    
    <script src="jk-carousel.min.js"></script>
@@ -65,15 +65,30 @@
         
     </md-toolbar>  -->
   <div hide show-gt-xs  layout="row" layout-align="end start">
-    <md-content class="md-padding" >
+   <!--  <md-content class="md-padding" >
           <md-nav-bar  md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
+         
             <md-nav-item md-nav-click="goto('page1')" name="page1">Home</md-nav-item>
             <md-nav-item md-nav-click="goto('page2')" name="page2">Profile</md-nav-item>
             <md-nav-item md-nav-click="goto('page3')" name="page3">Products</md-nav-item>
             <md-nav-item md-nav-click="goto('page4')" name="page4">Industries</md-nav-item>
             <md-nav-item md-nav-click="goto('page5')" name="page5">Contact Us</md-nav-item>
           </md-nav-bar>
-      </md-content> 
+      </md-content>  -->
+      <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Toolbar with Standard Buttons</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-raised" aria-label="Learn More">Home</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Profile</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Products</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Industries</md-button>
+    <md-button class="md-raised" aria-label="Learn More">Contact Us</md-button>
+      
+      </div>
+    </md-toolbar>
   </div>
 
   <div hide-gt-xs layout="column">
@@ -91,14 +106,31 @@
           data="dataArray"
           item-template-url="'item-template.html'"
           max-width="800" 
-          max-height="500"
+          max-height="600"
           auto-slide="true"
           auto-slide-time="2000" 
          >
          </jk-carousel>
          </md-card>
       </div>   
- <div layout="column" layout-gt-xs="row">
+
+<md-card>
+        
+        
+        <md-card-content style="background-color: #5cb2c5">
+          <h1 style="text-align:center">
+            About Us
+            </h1>
+            <p style="text-align:center">
+            Core Technologies is an electronic product design company dealing in automation and embedded solutions to various companies and institutions in the fields of Railways, Defence, Telecom, Instrumentation, Power Electronics & Drives, Industrial Automation, Data Acquisition, Solar Energy, Home & Office Automation Systems and other industry sectors.
+            </p>
+        </md-card-content>
+      </md-card>
+
+
+
+
+ <div layout="column" layout-gt-xs="row" style="background:grey">
      <md-card>
         
         <img ng-src="logo.jpg" class="md-card-image" alt="Washed Out">
@@ -149,7 +181,16 @@
 
 </div>
 
-
+<md-card>
+<md-card-content style="background-color: #5cb2c5">
+          <h1 style="text-align:center">
+           Contact Us
+            </h1>
+            <p style="text-align:center">
+            Core Technologies is an electronic product design company dealing in automation and embedded solutions to various companies and institutions in the fields of Railways, Defence, Telecom, Instrumentation, Power Electronics & Drives, Industrial Automation, Data Acquisition, Solar Energy, Home & Office Automation Systems and other industry sectors.
+            </p>
+        </md-card-content>
+      </md-card>
 <!-- </div>
  <!-- <div layout="row" layout-xs="column">
    <div  flex>
