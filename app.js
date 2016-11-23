@@ -29,7 +29,9 @@
       {
         src: 'pic5.jpg'
       },
-      
+      {
+        src: 'pic6.jpg'
+      },
     ];
 });
     
@@ -38,5 +40,5 @@ myApp.controller('toolbarCtrl', function($scope,$location) {
         $scope.goto = function (val) {
         $location.path(val);
     };
-
+       $scope.currentNavItem = "home";
     });

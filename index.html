@@ -7,6 +7,7 @@
          <link href="jk-carousel.min.css" rel="stylesheet" type="text/css" >
          <link href="app.css"  rel="stylesheet" type="text/css">
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
    </head>
 
    
@@ -22,8 +23,7 @@
    <script src="jk-carousel.min.js"></script>
    <script src="app.js"></script>
   
- 
-  <div  ng-controller="toolbarCtrl" hide show-gt-xs  layout="row" layout-align="end start">
+  <div  ng-controller="toolbarCtrl" hide show-gt-xs  layout="row" layout-align="start start">
  <!--    <md-toolbar>
       <div class="md-toolbar-tools" style="background-color: " >
         <h2><span>Toolbar with Standard Buttons</span></h2>
@@ -36,9 +36,12 @@
       </div>
     </md-toolbar>
   --> 
-    <md-content class="md-padding">
-    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-      <md-nav-item class="btn" md-nav-click="goto('/')" name="page1">Home</md-nav-item>
+
+    <md-content class="md-padding" style="margin-bottom:2px">
+    <md-nav-bar   md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
+      <span flex><img ng-src="em.png" style="max-height:40px"></span>
+      <div style="min-width: 400px"></div>
+      <md-nav-item class="btn" md-nav-click="goto('/')" name="home">Home</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page2">Profile</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page3">Products</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page4">Industries</md-nav-item>

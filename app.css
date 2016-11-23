@@ -1,3 +1,5 @@
+
+
 .btn:hover{
 	background-color: white;
 }
@@ -5,4 +7,41 @@
 .card:hover
 {
 		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.contact
+{
+	color:white;
+	padding:50px 40px;
+	background-color: #333;
+}
+
+.contact-head
+{
+
+	margin:0 auto 25px;
+	max-width:1380px;
+	text-align: center;
+
+}
+
+.tit
+{
+	font-size: 55px;
+	line-height: 55px;
+	margin:0;
+	padding:0;
+	color:#fff;
+}
+
+.phone
+{
+ margin-left:50px;
+ color:white;
+ text-align:center;
+ min-width:300px;	
+ background-color: #333;
+ /*background-color:blue;*/
+ font-size 18px;
+
 }
