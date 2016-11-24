@@ -45,7 +45,7 @@
     </md-card>
 
      <md-card class="card"> 
-        <img ng-src="logo.jpg" class="md-card-image" alt="Washed Out">
+        <img ng-src="card1.jpg" class="md-card-image" alt="Washed Out">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">Card header</span>
@@ -101,8 +101,8 @@
       <br>repair and maintenance issues.  We can help.</p>
     </div>
     
-    <div layout="row"> 
-     <md-card style=" color:white;background-color: #333; min-width:400px;margin-left: 50px">
+    <div layout="column" layout-gt-xs="row" flex > 
+     <md-card style=" color:white;background-color: #333; min-width:300px;margin-left: 50px" >
       <md-input-container class="md-block" flex-gt-sm>
             <label style="color:white">Name</label>
             <input ng-model="user.firstName">
