@@ -24,35 +24,18 @@
    <script src="app.js"></script>
   
   <div  ng-controller="toolbarCtrl" hide show-gt-xs  layout="row" layout-align="start start">
- <!--    <md-toolbar>
-      <div class="md-toolbar-tools" style="background-color: " >
-        <h2><span>Toolbar with Standard Buttons</span></h2>
-        <span flex></span>
-        <md-button  ng-click="goto('/')" class="bar md-primary md-raised " aria-label="Learn More">Home</md-button>
-        <md-button class="md-primary md-raised" aria-label="Learn More">Profile</md-button>
-        <md-button ng-click="goto('/products')" class="md-primary md-raised" aria-label="Learn More">Products</md-button>
-        <md-button class="md-primary md-raised" aria-label="Learn More">Industries</md-button>
-        <md-button class="md-primary md-raised" aria-label="Learn More">Contact Us</md-button>
-      </div>
-    </md-toolbar>
-  --> 
+ 
+   <!-- <md-content > -->
 
-    <md-content class="md-padding">
-    <md-nav-bar   md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" >
-      <span flex><img ng-src="EM.png" style="max-height:40px"></span>
-      <div style="min-width: 400px"></div>
+      <div flex><img ng-src="EM.png" style="max-height:40px"></div>
+    <md-nav-bar   md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
       <md-nav-item class="btn" md-nav-click="goto('/')" name="home">Home</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page2">Profile</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page3">Products</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page4">Industries</md-nav-item>
       <md-nav-item class="btn" md-nav-click="goto('/')" name="page5">Learn More</md-nav-item>
-      
-      <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
-      <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
-      <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
-      -->
     </md-nav-bar>
-</md-content>
+  <!-- </md-content> -->
   </div>
 
   <div  ng-controller="toolbarCtrl" hide-gt-xs layout="column">
