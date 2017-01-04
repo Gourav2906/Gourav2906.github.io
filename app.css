@@ -38,10 +38,10 @@
 
 .phone
 {
- margin-left:10%;
+ margin-left:auto;
  color:white;
  text-align:center;
- min-width:300px;	
+ max-width:300px;	
  background-color: #333;
  /*background-color:blue;*/
  font-size 18px;
